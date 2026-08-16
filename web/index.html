@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>burnlens</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand"><img class="brand-mark" src="/favicon.svg" width="20" height="20" alt="" /><span class="brand-word"><span>burn</span>lens</span></div>
+
+      <div class="group" id="view-group" role="group" data-i18n-aria-label="toolbar.view"></div>
+
+      <div class="group" id="period-group" role="group" data-i18n-aria-label="toolbar.period"></div>
+
+      <div class="daypick" id="daypick"></div>
+
+      <div class="group" id="metric-group" role="group" data-i18n-aria-label="toolbar.metric"></div>
+
+      <div class="spacer"></div>
+      <span class="span-note" id="span-note"></span>
+
+      <div class="sourcepick" id="sourcepick">
+        <select id="source-select" data-i18n-aria-label="toolbar.source"></select>
+        <button class="ghost tiny" id="source-remove" hidden data-i18n-title="toolbar.sourceRemove">✕</button>
+      </div>
+
+      <select id="locale-select" data-i18n-aria-label="toolbar.locale"></select>
+
+      <div id="share-slot"></div>
+
+      <button class="ghost" id="reindex" data-i18n="toolbar.reindex"></button>
+    </header>
+
+    <div id="chips" class="chips"></div>
+
+    <main id="main">
+      <div class="stack" id="spend-view">
+      <section class="kpis" id="kpis"></section>
+
+      <section class="panels">
+        <div class="panel">
+          <div class="panel-head">
+            <h2 data-i18n="spend.panel.breakdownChart"></h2>
+            <select id="dim-select" data-i18n-aria-label="toolbar.dimension"></select>
+          </div>
+          <div class="donut-wrap">
+            <svg id="donut" viewBox="0 0 220 220" data-i18n-aria-label="spend.chart.donut"></svg>
+            <ul class="legend" id="legend"></ul>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2 id="bars-title" data-i18n="spend.chart.byDay"></h2>
+            <span class="hint" id="bars-hint" data-i18n="spend.chart.barsHint"></span>
+          </div>
+          <svg id="bars" viewBox="0 0 720 260" data-i18n-aria-label="spend.chart.bars"></svg>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2 data-i18n="spend.panel.detail"></h2>
+          <span class="hint" data-i18n="spend.panel.detailHint"></span>
+        </div>
+        <div class="table-scroll"><table id="breakdown"></table></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2 data-i18n="spend.panel.sessions"></h2>
+          <span class="hint" data-i18n="spend.panel.sessionsHint"></span>
+        </div>
+        <div class="table-scroll"><table id="sessions"></table></div>
+      </section>
+      </div>
+
+      <div class="stack" id="cache-view" hidden></div>
+
+      <div class="stack" id="diag-view" hidden></div>
+
+      <div class="stack" id="probes-view" hidden></div>
+    </main>
+
+    <div id="drawer" class="drawer" hidden>
+      <div class="drawer-head">
+        <button class="ghost" id="drawer-back" hidden data-i18n-title="common.backTitle" data-i18n="common.back"></button>
+        <div class="drawer-titles">
+          <nav class="crumbs" id="crumbs" data-i18n-aria-label="toolbar.navigation"></nav>
+          <h2 id="drawer-title" data-i18n="drawer.session"></h2>
+          <div class="sub" id="drawer-sub"></div>
+        </div>
+        <div id="drawer-share"></div>
+        <button class="ghost" id="drawer-close" data-i18n="common.close"></button>
+      </div>
+      <div class="drawer-body" id="drawer-body"></div>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
