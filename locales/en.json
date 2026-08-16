@@ -1,0 +1,1430 @@
+{
+  "units": {
+    "bytes": "{v} B",
+    "kilobytes": "{v} KB",
+    "megabytes": "{v} MB",
+    "seconds": "{v}s",
+    "minutesSeconds": "{m}m {s}s",
+    "hoursMinutes": "{h}h {m}m",
+    "chars": "{v} chars"
+  },
+  "common": {
+    "empty": "no data for this period",
+    "loading": "Loading…",
+    "other": "other",
+    "all": "All",
+    "back": "‹ Back",
+    "close": "Close ✕",
+    "backTitle": "Back (Backspace)",
+    "col": {
+      "agent": "agent",
+      "spend": "spend",
+      "share": "share",
+      "messages": "messages",
+      "sessions": "sessions",
+      "session": "session",
+      "run": "run",
+      "runs": "runs",
+      "turn": "turn",
+      "turns": "turns",
+      "start": "start",
+      "duration": "duration",
+      "model": "model",
+      "size": "size",
+      "overpay": "overpay",
+      "what": "what",
+      "tokens": "tokens",
+      "turnPrice": "turn price"
+    },
+    "action": {
+      "expand": "expand",
+      "filterButton": "filter ⤴",
+      "filterByAgentTitle": "Filter the whole dashboard by this agent"
+    },
+    "error": {
+      "failed": "Failed: {detail}"
+    },
+    "calculating": "Calculating…",
+    "turn": "turn {n}"
+  },
+  "toolbar": {
+    "view": "View",
+    "period": "Period",
+    "metric": "Metric",
+    "dimension": "Dimension",
+    "navigation": "Navigation",
+    "locale": "Language",
+    "periodDays": {
+      "one": "{n} day",
+      "other": "{n} days"
+    },
+    "reindex": "Reindex",
+    "source": "Claude folder",
+    "sourceRemove": "Remove folder from the list",
+    "span": "index: {messages}, {from} — {to}",
+    "shareTitle": "The whole screen for the selected period",
+    "specificDay": "Specific day",
+    "prevDay": "Previous day",
+    "nextDay": "Next day",
+    "resetDay": "Reset day",
+    "today": "Today",
+    "removeFilter": "Remove filter",
+    "index": {
+      "runningTitle": "Indexing is running on the server",
+      "progress": "Indexing… {scanned}/{total}",
+      "running": "Indexing…",
+      "error": "Index error ⚠",
+      "changed": "{files} files, {messages} messages",
+      "upToDate": "Index is up to date",
+      "lastRunTitle": "{seconds}s, {files} files scanned",
+      "serverDown": "Server not responding ⚠"
+    }
+  },
+  "view": {
+    "spend": "Spend",
+    "cache": "Cache",
+    "diag": "Diagnostics",
+    "probes": "Probes"
+  },
+  "metric": {
+    "usd": {
+      "label": "$",
+      "title": "Dollars at API pricing"
+    },
+    "weighted": {
+      "label": "limit",
+      "title": "Weighted tokens — limit units"
+    },
+    "raw": {
+      "label": "tokens",
+      "title": "Raw tokens, unweighted"
+    }
+  },
+  "dimension": {
+    "project": "Project",
+    "agent": "Agent",
+    "model": "Model",
+    "kind": "Main thread / subagents",
+    "session_kind": "Background / foreground"
+  },
+  "drawer": {
+    "session": "Session",
+    "shareTitle": "Hand the agent what's open",
+    "runCrumb": "Run {shortId}"
+  },
+  "spend": {
+    "panel": {
+      "breakdownChart": "Spend breakdown",
+      "detail": "Detail",
+      "detailHint": "click a row — filter",
+      "sessions": "Sessions",
+      "sessionsHint": "click — drill into the session"
+    },
+    "chart": {
+      "donut": "Spend breakdown chart",
+      "bars": "Spend by day",
+      "byDay": "By day",
+      "barsHint": "height — spend, color — the same dimension",
+      "sliceTooltip": "{label} — {value} ({pct}%)",
+      "byHour": "By hour · {day}",
+      "hourlyHint": "the whole day, 24 hours — shows exactly when it burned",
+      "dailyHint": "click a bar — drill into that day",
+      "noSpendDay": "no spend on this day",
+      "barTooltip": "{bucket} · {key} · {value}",
+      "dayDrillHint": "click — open this day"
+    },
+    "kpi": {
+      "spend": "Spend",
+      "messages": {
+        "one": "{n} message",
+        "other": "{n} messages"
+      },
+      "cacheShare": "≈{pct}% of the bill (opus rate)",
+      "sessions": "Sessions"
+    },
+    "sessionsTable": {
+      "project": "project",
+      "activity": "activity in period"
+    }
+  },
+  "sources": {
+    "error": {
+      "emptyPath": "empty path",
+      "notFound": "folder not found: {path} (neither it nor {projectsPath})",
+      "saveFailed": "failed to save the source",
+      "unknown": "unknown source: {id}",
+      "builtinUndeletable": "the built-in source cannot be removed",
+      "addFailed": "Failed to add folder:\n{detail}",
+      "removeFailed": "Failed to remove folder:\n{detail}"
+    },
+    "addOption": "＋ Add folder…",
+    "prompt": {
+      "path": "Path to a Claude folder (e.g. ~/.claude-personal):"
+    },
+    "confirm": {
+      "remove": "Remove «{label}» from the list? The index stays on disk."
+    }
+  },
+  "server": {
+    "error": {
+      "rootPinned": "server started with --root: the source list is fixed",
+      "page": "# Error\n\n{message}\n\nLink index: {indexUrl}\n",
+      "needTwoRuns": "need at least two agent runs",
+      "badJson": "request body did not parse as JSON",
+      "unreadableBody": "request body could not be read"
+    }
+  },
+  "probeconfig": {
+    "builtin": {
+      "refusals": {
+        "label": "Refusals and dead ends"
+      }
+    },
+    "error": {
+      "invalidRegex": "invalid regex in «{field}»: {message}",
+      "idFormat": "id must be kebab-case: «{id}»",
+      "labelRequired": "probe needs a name (label)",
+      "unknownScope": "unknown scope: «{scope}»",
+      "toolOnlyForToolResult": "tool refinement is only valid for tool_result: «{scope}»",
+      "emptyToolName": "empty tool name: «{scope}»",
+      "groupByNeedsOneGroup": "«groupBy» needs exactly one capture group",
+      "unknownProbe": "unknown probe: {id}",
+      "builtinUndeletable": "a built-in probe cannot be removed — disable it instead (enabled: false)"
+    }
+  },
+  "share": {
+    "kind": {
+      "overview": {
+        "about": "Where the tokens went for the period: totals and breakdowns by project, agent, model and day."
+      },
+      "cache": {
+        "about": "Cache rewrites for the period: how much context got rewritten from scratch, who loses and why."
+      },
+      "diag": {
+        "about": "Where the agent fan-out loses money: which runs strayed from their own median, what a unit of output cost, which calls packed the context most expensively, and what happened to the runs."
+      },
+      "probe": {
+        "title": "Probe",
+        "about": "What the probe found in the logs, and what the runs it flagged cost against clean runs of the same agent."
+      },
+      "session": {
+        "title": "Session",
+        "about": "One whole session: agents, models, runs, and the most expensive moments on a shared clock."
+      },
+      "agent": {
+        "title": "Agent in a session",
+        "about": "All runs of one agent within a session — how many, how they differed, what they cost."
+      },
+      "run": {
+        "title": "Run",
+        "about": "One run: spend by turn and the full history — prompts, responses, tool calls."
+      },
+      "context": {
+        "title": "Context composition",
+        "about": "What a run's context is made of: blocks by origin, and what sits in it twice."
+      },
+      "cohort": {
+        "title": "Shared context across runs",
+        "about": "What a fan-out of one agent's runs collected separately, and what the repeat collection cost."
+      }
+    },
+    "error": {
+      "emptyRef": "empty reference",
+      "unknownKind": "unknown reference kind: {kind} (known: {list})",
+      "missingParam": "reference {kind} needs parameter {key}",
+      "probeMissing": "probe {probe} is not in the config (known: {list})",
+      "sessionNotFound": "session not found in the index"
+    },
+    "report": {
+      "probeTitle": "Probe — {label}",
+      "cacheTitle": "Cache — context rewrites",
+      "diagTitle": "Diagnostics — where the money is lost"
+    },
+    "widget": {
+      "button": "Share",
+      "buttonPrefix": "Share: ",
+      "buttonCompactPrefix": "↗ ",
+      "defaultTitle": "Hand this finding to an agent",
+      "titleWithHint": "{title} — {hint}",
+      "otherFormat": "Other format",
+      "pickFormat": "Pick a format",
+      "copyManually": "Copy it by hand",
+      "nothingToShare": "nothing to share",
+      "linkCopied": "✓ link copied",
+      "commandCopied": "✓ command copied",
+      "copied": "✓ copied, {size}",
+      "copyByHand": "copy by hand",
+      "working": "…",
+      "failed": "error: {detail}",
+      "threw": "failed: {detail}",
+      "format": {
+        "link": {
+          "label": "Link for an agent",
+          "hint": "an agent opens it and gets the same digest"
+        },
+        "json": {
+          "label": "JSON to clipboard",
+          "hint": "the whole payload — paste straight into a chat"
+        },
+        "md": {
+          "label": "Markdown to clipboard",
+          "hint": "the same digest as text"
+        },
+        "cli": {
+          "label": "CLI command",
+          "hint": "burnlens show — works without a server"
+        }
+      }
+    },
+    "metric": {
+      "usd": "$ at API list price",
+      "weighted": "weighted tokens (limit units)",
+      "raw": "raw tokens"
+    },
+    "duration": {
+      "sec": "{n}s",
+      "minSec": "{m}m {s}s",
+      "hourMin": "{h}h {m}m"
+    },
+    "period": {
+      "all": "the whole index",
+      "range": "{from} → {to}",
+      "from": "from {from}",
+      "to": "until {to}"
+    },
+    "filters": "filters: {list}",
+    "empty": "_empty_",
+    "shownOf": "_showing {n} of {total}_",
+    "shownLastOf": "_showing the last {n} of {total}_",
+    "meta": {
+      "source": "source: {label} ({root})",
+      "metric": "metric: {name}",
+      "collected": "collected: {at}"
+    },
+    "err": {
+      "noAgentInSession": "no such agent in this session",
+      "noSuchRun": "no such run in the index",
+      "needTwoRuns": "at least two runs of the agent are needed"
+    },
+    "title": {
+      "agentRuns": "{agent} — {n} {unit}",
+      "run": "{agent} · {id}",
+      "runFallback": "run",
+      "context": "Context composition · {agent} {id}",
+      "contextTurns": "turns {from}–{to}",
+      "cohort": "Shared context across runs · {agent}",
+      "wholeSession": "the whole session"
+    },
+    "plural": {
+      "runs": {
+        "one": "run",
+        "other": "runs"
+      },
+      "runsWentOver": {
+        "one": "run went",
+        "other": "runs went"
+      },
+      "agents": {
+        "one": "agent",
+        "other": "agents"
+      },
+      "bursts": {
+        "one": "burst",
+        "other": "bursts"
+      },
+      "sessionsIn": {
+        "one": "session",
+        "other": "sessions"
+      },
+      "nonEmptyHits": {
+        "one": "non-empty hit",
+        "other": "non-empty hits"
+      }
+    },
+    "next": {
+      "heading": "## Where next",
+      "otherForms": "## The same finding in another form",
+      "fullJson": "- full JSON: {url}",
+      "noServer": "- without a server: `burnlens show '{ref}'` (`--json` — the same payload)",
+      "runHistoryOf": "{link} — history of the {agent} run",
+      "allRunsOf": "{link} — every run of {agent}",
+      "collectedSeparately": "{link} — what these runs collected separately",
+      "contextOf": "{link} — what the context is made of",
+      "neighbourRuns": "{link} — neighbouring runs of the agent",
+      "wholeSession": "{link} — the whole session",
+      "thisRunHistory": "{link} — history of this run",
+      "cohortRunList": "{link} — the cohort run list",
+      "outlierHistory": "{link} — history of the {agent} outlier ({ratio}× the median)",
+      "flaggedHistory": "{link} — history of the flagged {agent} run",
+      "wholeWindow": "{link} — the same window whole: outliers, tails, what happened",
+      "session": "{link} — session {label}"
+    },
+    "head": {
+      "total": "## Totals",
+      "topSessions": "## Most expensive sessions",
+      "ifHourTtl": "## What ENABLE_PROMPT_CACHING_1H would give",
+      "overpayByDay": "## Overpay by day",
+      "whoLoses": "## Who's losing",
+      "topMisses": "## Most expensive misses",
+      "outliers": "## Outliers: a run against its own agent’s median",
+      "topCalls": "## Most expensive calls",
+      "costPerUnit": "## Cost per unit of result",
+      "tail": "## Tail: turns after the last artifact",
+      "whatHappened": "## What happened to the runs",
+      "heavyBriefs": "## Heavy subagent briefs",
+      "rule": "## Rule",
+      "flaggedVsClean": "## Flagged runs against the same agent's clean ones",
+      "byRuleGroup": "## By rule group",
+      "byDay": "## By day",
+      "whatWasFound": "## What exactly was found",
+      "agents": "## Agents",
+      "models": "## Models",
+      "runs": "## Runs",
+      "topMessages": "## Most expensive messages",
+      "tools": "## Tools",
+      "cacheRewrites": "## Cache rewrites",
+      "contextByTurn": "## Context by turn",
+      "history": "## History",
+      "byOrigin": "## By origin",
+      "whoPutIt": "## Who exactly put it there",
+      "duplicates": "## Sitting in context more than once",
+      "biggestBlocks": "## Biggest blocks",
+      "biggestGrowth": "## Turns where context grew the most",
+      "collectedSeparately": "## What was collected separately",
+      "cohortRuns": "## Cohort runs"
+    },
+    "col": {
+      "tokens": "tokens",
+      "project": "project",
+      "startedAt": "started",
+      "day": "day",
+      "cause": "cause",
+      "misses": "misses",
+      "overpayUsd": "overpay $",
+      "time": "time",
+      "pause": "pause",
+      "tool": "tool",
+      "onWhat": "on what",
+      "cost": "cost",
+      "returned": "what came back",
+      "repeats": "repeats",
+      "xMedian": "×median",
+      "median": "median",
+      "overMedian": "over median",
+      "perArtifact": "per artifact",
+      "per1kOutput": "per 1k output",
+      "avgTurns": "avg turns",
+      "artifacts": "artifacts",
+      "reads": "reads",
+      "tail": "tail",
+      "tailShare": "share of run",
+      "errors": "errors",
+      "of429": "of them 429",
+      "lasted": "lasted",
+      "liveRuns": "live runs",
+      "spendInWindow": "spend in window",
+      "chars": "chars",
+      "copies": "copies",
+      "sender": "sent by",
+      "about": "about",
+      "xClean": "×clean",
+      "flagged": "flagged",
+      "avgFlagged": "avg flagged",
+      "clean": "clean",
+      "avgClean": "avg clean",
+      "group": "group",
+      "hits": "hits",
+      "spendFlagged": "flagged spend",
+      "nonEmptyOfThem": "non-empty",
+      "peakContext": "peak context",
+      "cacheRead": "cache read",
+      "cacheWrite": "cache write",
+      "calls": "calls",
+      "context": "context",
+      "kind": "what it is",
+      "blocks": "blocks",
+      "label": "label",
+      "extra": "extra",
+      "turns": "turns",
+      "textStart": "start of the text",
+      "growth": "growth",
+      "contextAfter": "context after",
+      "halfOverpay": "half of the overpay",
+      "howRemoved": "how it is removed",
+      "prefixReturns": "prefix returns",
+      "medianTurn": "median turn",
+      "collected": "collected",
+      "ofItShared": "of it shared"
+    },
+    "group": {
+      "project": "By project",
+      "agent": "By agent",
+      "model": "By model",
+      "kind": "Main thread and subagents",
+      "workflow": "By workflow",
+      "day": "By day"
+    },
+    "origin": {
+      "subagent": "subagent returns",
+      "write": "your own Write / Edit",
+      "plan": "plans",
+      "thinking": "reasoning",
+      "dispatch": "subagent briefs",
+      "command": "commands",
+      "result": "tool results",
+      "reminder": "system reminders",
+      "answer": "assistant answers",
+      "prompt": "prompts"
+    },
+    "overview": {
+      "totals": "**{value}** · {messages} messages · {sessions} sessions",
+      "tokenLine": "output {output} · cache read {cacheRead} · cache write {cacheWrite} · input {input}"
+    },
+    "cache": {
+      "totals": "**{misses}** context rewrites, {tokens} tokens written again.",
+      "overpay": "Overpay — **{value}**",
+      "overpayOfSpend": "Overpay — **{value}** ({pct} of the period’s spend)",
+      "causeExpired": "TTL expired",
+      "causeInvalidated": "prefix reset",
+      "shortExpired": "expired",
+      "shortInvalidated": "reset",
+      "medianIdle": "- median pause before an expired write: {median}",
+      "medianIdleMax": "- median pause before an expired write: {median}, max {max}",
+      "overHour": "- pauses longer than an hour (an hourly TTL would not have helped): {n}",
+      "writtenByTtl": "- written by TTL: 5 minutes {ttl5m} · hour {ttl1h}",
+      "counterfactual": "Misses saved worth {saved}, hourly-write premium {premium} — net **{verdict}**.",
+      "gain": "gain {v}",
+      "loss": "loss {v}"
+    },
+    "diag": {
+      "totals": "**{spend}** in the window — {messages} messages, {sessions} sessions.",
+      "assembled": " The assembled context cost about **{value}**",
+      "assembledOfSpend": " ({pct} of spend)",
+      "carryTail": ", and {pct}% of that is not collecting but carrying what was already collected across turns.",
+      "outliers": "**{n}** {unit} over 2× their own median. {agents} {agentUnit} judged ({judged} {judgedUnit}) — ",
+      "medianWholeHistory": "the median is taken from the agent's whole history in the index rather than this window: one window rarely holds five runs of an agent, and without five there is no median.",
+      "medianWindow": "an agent with fewer than five runs in the window has no median.",
+      "unjudged": " Not judged: {list} — they have no fixed task, and the spread between runs is normal, not a regression.",
+      "call": "- {value} — {tool}({target}), {tokens} tokens on turn {turn} of {turnsTotal}, carried for {carry} more turns ({agent})",
+      "callsNote": "_Estimate: the result size in characters, divided by 2.4 characters per token, times the number of turns the block then rode in the cache. What is accurate here is the order of magnitude and the ranking, not the third digit._",
+      "tailTotal": "Tails hold **{value}** across {runs} runs.",
+      "rateLimits": "- **rate limits**: {n} 429 responses in {bursts} {unit} (+{singles} singles), days with errors {days}",
+      "compactions": "- **compactions**: {n} across {sessions} {unit} (auto {auto}, manual {manual}), context rebuild after them — {value}",
+      "compactionsMedian": "; median context on the way in {tokens}",
+      "toolFailures": "- **failed calls**: {calls} of {allCalls} ({rate}%), the error text weighs {tokens} tokens ≈ {value} with carry",
+      "interrupts": "- **cut off**: {truncated} by max_tokens, {interrupts} interrupted by the user; the runs behind them cost {value}",
+      "topOfThem": "The most expensive of them:",
+      "cycles": "Cycles — the same call in a row, with the same error:",
+      "briefs": "{dispatches} dispatches carrying {tokens} tokens of briefs; {copies} repeats worth {value}."
+    },
+    "probe": {
+      "builtin": " · built-in",
+      "disabled": " · disabled",
+      "scope": "- where it looks: `{scope}`",
+      "pattern": "- pattern: `{pattern}`",
+      "emptyIf": "- a block counts as empty if: `{rule}`",
+      "groupBy": "- broken down by: `{rule}`",
+      "neverFired": "The probe never fired in this window.",
+      "totals": "**{nonEmpty}** {unit} of {hits}; empty {empty}. Flagged {runs} {runUnit} across {sessions} {sessionUnit}.",
+      "flaggedCost": "The flagged runs cost **{value}** — {usd} at list price, {weighted} weighted tokens.",
+      "xCleanNote": "_\"×clean\" is the average flagged run divided by the average clean run of the SAME agent; \"—\" means there were no clean runs in the window to compare against._",
+      "sampleHead": "**{agent}** · {at} · {project}",
+      "sampleGroup": " · group {group}",
+      "sampleRunLink": "- {link} — history of this run",
+      "sampleNoRun": "- session {session} (run undetermined — the hit is outside a subagent)",
+      "samplesNote": "_showing the last {n} of {total} non-empty; the finding text is clipped._"
+    },
+    "session": {
+      "totals": "**{value}** · {messages} messages · {runs} {unit}",
+      "firstTs": "- started: {at}",
+      "lastTs": "- ended: {at}",
+      "firstPrompt": "- first prompt: {text}",
+      "noTimeline": "_the per-message timeline is not included: add `&full=1` if you need every call on one clock._"
+    },
+    "agent": {
+      "totals": "**{value}** across {runs} {unit} · average {avg} · peak context {peak}"
+    },
+    "run": {
+      "totals": "**{value}** · {turns} turns · {duration} · peak context {peak} · output {output}",
+      "times": "- started: {from}, ended: {to}",
+      "model": "- model: {model}",
+      "modelEffort": ", effort {effort}",
+      "promptStep": "**▸ prompt · {at}**",
+      "promptChars": " _({n} chars)_",
+      "turnStep": "**turn {n} · {at}**",
+      "turnStats": " — context {context}, output {output}, ",
+      "thinking": ", reasoning {n} chars",
+      "cacheRewrite": ", cache rewrite +{value}",
+      "resultError": "error",
+      "resultOk": "result",
+      "resultLine": "← {kind}{of}{note}{chars}",
+      "resultChars": " — {n} chars",
+      "truncated": "_showing {n} of {total} steps — add `&limit={total}` for the full history._",
+      "note": "_Prompts and answers are clipped to 600 characters when the log is read; tool result bodies are not stored at all — only their size. What was in the context is shown by the `context` link._"
+    },
+    "context": {
+      "totals": "Context at the end of the window — **{tokens}** tokens, turns {from}–{to} of {turns}.",
+      "dupes": "- duplicates inside the window: **{tokens}** ({pct} of context)",
+      "invisible": "- not visible in the log (system prompt, tool schemas, CLAUDE.md, summaries): {tokens}",
+      "fit": "- characters-per-token fit: {ratio} over {points} points, discrepancy {error}%",
+      "windows": "- context windows in the run: {n} ({list}) — one is reported, chosen by the `turn` parameter"
+    },
+    "cohort": {
+      "collected": "{runs} runs collected {tokens} of large blocks; {shared} of them ({pct}%) were collected by more than one run.",
+      "wasted": "The repeat collection cost **{wasted}** of the cohort’s {actual} spend ({pct}%).",
+      "writeRow": "writing copies into the cache",
+      "writeFix": "a shared prefix: collect once and put it there",
+      "carryRow": "carrying copies across turns",
+      "carryFix": "a prefix does not remove it — only fewer agents, a smaller payload or fewer turns",
+      "prefix": "Moving it into a shared prefix returns **{value}**: the write becomes a read, but the block rides from turn 1 rather than turn k — worth it while k < {breakEven} turns.",
+      "runsOf": "{n} of {total}",
+      "variants": " ({n} versions)"
+    },
+    "index": {
+      "title": "# burnlens — links to findings",
+      "intro": "Every link is the address of a finding, not a snapshot of it: the content is recomputed from the index at request time.",
+      "format": "Markdown is returned by default; `&format=json` returns the same payload the dashboard receives.",
+      "tableHead": "| kind | required parameters | what is inside |",
+      "optional": "Optional parameters: `metric` (`usd`\\|`weighted`\\|`raw`), `top`, `source`, plus the period filters `from`/`to` (epoch ms) and `project`/`agent`/`model`/`kind` where they apply.",
+      "cli": "Without a server the CLI returns the same: `burnlens show 'bl://<kind>?<params>'`.",
+      "example": "Example: {url}"
+    }
+  },
+  "cli": {
+    "emptyIndex": "index is empty — run `burnlens index` first",
+    "messages": {
+      "one": "{n} message",
+      "other": "{n} messages"
+    },
+    "period": {
+      "all": "All time",
+      "lastDays": "Last {n}d"
+    },
+    "sourceSuffix": " ({label})",
+    "error": {
+      "unknownSource": "unknown source: {query}\nknown: {list}"
+    },
+    "serve": {
+      "ready": "\n  burnlens → http://127.0.0.1:{port}\n"
+    },
+    "index": {
+      "start": "{tag}indexing…",
+      "progress": "\r{tag}indexing… {scanned}/{total} files ({changed} changed)   ",
+      "done": "{tag}indexed {changed}/{seen} files, {messages} new messages, {pruned} pruned, {seconds}s",
+      "span": "{tag}index holds {messages} messages, {from} → {to}",
+      "db": "{tag}db: {path}"
+    },
+    "report": {
+      "summary": "\nLast {days}d{source} — {value} across {messages} messages, {sessions} sessions",
+      "tokens": "  output {output} · cache read {cacheRead} · cache write {cacheWrite} · input {input}",
+      "byDim": "\n  ── by {dim} {rule}"
+    },
+    "diag": {
+      "summary": "\n{period}{source} — {value}, {messages}",
+      "head": {
+        "contextCost": "cost of the assembled context (estimate)",
+        "outliers": "outliers: run vs its agent's own median",
+        "unitCost": "cost per unit of output",
+        "tail": "tail: turns after the last artifact",
+        "health": "what happened to the runs"
+      },
+      "collected": "  collected at {value}, of which carry {percent}%",
+      "noOutliers": "  none — all runs are within 2× their own median",
+      "median": "median",
+      "turnsLabel": "turns",
+      "runsLabel": "runs",
+      "unjudged": "  not judged (no steady task): {list}",
+      "col": {
+        "spend": "spend",
+        "perArtifact": "$/artifact",
+        "per1kOut": "$/1k out",
+        "runsAgent": "runs  agent"
+      },
+      "bursts": {
+        "one": "{n} burst",
+        "other": "{n} bursts"
+      },
+      "rateLimit": "  limit: {errors} 429 responses in {bursts} (+{singles} singles), days with errors: {days}",
+      "burstRow": "    {time} — {errors} errors over {minutes}m, live runs in the window: {agents}",
+      "compactions": "  compactions: {count} across {sessions} sessions",
+      "compactionsRebuild": ", context rebuild after them — {value}",
+      "toolFailures": "  failed calls: {calls} of {allCalls} ({rate}%), {tokens} tokens in context ≈ {value}",
+      "failureLoop": "    loop: {tool} ×{count} — {target}  ({agent})",
+      "interruptions": "  interruptions: {truncated} by max_tokens, {interrupts} interrupted; runs worth {value}"
+    },
+    "probe": {
+      "unknownId": "no probe with id \"{id}\" — available: {list}",
+      "progress": "\r  scan: {scanned}/{total} files, {hits} hits   ",
+      "swept": "  ran {probes} probes over {files} files ({scanned} read), {hits} hits, {seconds}s",
+      "error": "  probe {id}: {message}",
+      "listTitle": "\nProbes ({path})\n",
+      "stale": "needs a run",
+      "state": "{hits} hits, {nonEmpty} non-empty",
+      "hintRun": "\n  run:    node src/cli.ts probe --run [--id ID] [--force]",
+      "hintReport": "  report:  node src/cli.ts probe <id> [--days N] [--top N]\n",
+      "totals": "  {hits} hits, {nonEmpty} non-empty, {runsFlagged} runs flagged, worth {value}",
+      "head": {
+        "flagged": "\n  ── flagged vs the rest of the same agent's runs ──",
+        "byGroup": "\n  ── by group ──",
+        "samples": "\n  ── samples ──"
+      },
+      "col": {
+        "flagged": "flagged",
+        "avgPrice": "avg price",
+        "turns": "turns",
+        "others": "others",
+        "agent": "agent"
+      }
+    },
+    "cohort": {
+      "needTwoRuns": "need at least two agent runs in a session",
+      "noFanOut": "no agent in the index ran 3+ times in one session",
+      "scanning": "\nLooking at the {n} most expensive subagent fan-outs…\n",
+      "row": "  {wasted} repeat collection  {share} of spend  {runs} runs   {label}",
+      "sourceRow": "  {pad}   {wasted}  {runs} of {total}  {tool} {label}",
+      "detailHint": "\n  detail: burnlens cohort --session <id> --agent <name>{workflow}\n",
+      "title": "\n{agent}{workflow} — {runs} runs, {value}",
+      "collected": "  collected {collected} large blocks, of which {shared} ({percent}%) were collected by more than one run",
+      "wasted": "  repeat collection cost {value} — {percent}% of the cohort's spend",
+      "wastedWrite": "    {value}  writing copies into the cache — removable with a shared prefix",
+      "wastedCarry": "    {value}  carrying copies across turns — not removable by a prefix",
+      "prefixHint": "  collecting ahead of time and placing it in a shared prefix returns {value}: the write turns into a read,\n  but the block rides from turn 1 instead of turn k — worth it while k < {turn} turns\n",
+      "col": {
+        "overpay": "overpay",
+        "prefix": "prefix",
+        "rest": "runs  size  turn  what"
+      },
+      "ofRuns": "{runs} of {total}",
+      "variants": {
+        "one": " ({n} variant)",
+        "other": " ({n} variants)"
+      }
+    },
+    "show": {
+      "usage": "usage: burnlens show 'bl://<kind>?<params>' [--json]\n",
+      "sourceNotFound": "# source {wanted} not found, reading {label}"
+    },
+    "sources": {
+      "row": "  {id} {label} {root}\n  {pad} db: {db}{span}",
+      "indexed": " — {messages} messages",
+      "notIndexed": " — not indexed"
+    },
+    "usage": "usage: burnlens <index|report|diag|probe|cohort|show|serve|sources> [flags]\n\n  index   [--force] [--source ID] [--root DIR] [--db PATH]\n  report  [--days N] [--metric usd|weighted|raw] [--by project,agent,...] [--top N] [--source ID]\n  diag    [--days N|all] [--metric usd|weighted|raw] [--top N] [--project P] [--agent A]\n          cost of the assembled context, outliers vs own median, cost per unit\n          of output, tails, and what happened to the runs\n  probe   [ID] [--run [--force]] [--days N|all] [--top N] [--metric M]\n          your own regex rules over the logs: no arguments — list the rules,\n          --run runs them over the corpus, with an ID — a report for one rule\n  cohort  [--session ID --agent NAME [--workflow ID]] [--scan N] [--top N]\n          what a subagent fan-out collected separately; without --session it\n          looks for the worst fan-outs itself\n  show    <link> [--json] [--source ID]\n          the finding a dashboard \"share\" click pointed at: bl://… or http://127.0.0.1:…/s/…\n          without an argument, prints the list of link kinds\n  serve   [--port N] [--no-index]\n  sources                      Claude folders the spend is computed over\n\nSources are added and switched in the dashboard (the picker top right);\nthe list lives at ~/.claude/burnlens/sources.json, each with its own index.\n"
+  },
+  "diag": {
+    "empty": "There's nothing to break down in this window: for the selected period (and current filters) the index has no tool calls and no runs. Widen the period, clear the filters, or reindex — button top right.",
+    "actions": {
+      "openRun": "Open run"
+    },
+    "nav": {
+      "filterByAgent": "Filter the dashboard by this agent",
+      "openSession": "Open session",
+      "agentRunsInSession": "All runs of this agent in the session"
+    },
+    "hint": {
+      "clickOpenRun": "click — open run",
+      "clickAction": "click — {action}"
+    },
+    "shown": {
+      "outOf": "{n} of {total}"
+    },
+    "table": {
+      "header": {
+        "agent": "agent",
+        "when": "when",
+        "cost": "cost",
+        "agentMedian": "agent median",
+        "ratio": "ratio",
+        "turns": "turns",
+        "model": "model",
+        "runs": "runs",
+        "medianOf": "median of",
+        "outliersOf": "of which outliers",
+        "outlierCost": "outlier cost",
+        "overMedian": "over median",
+        "spend": "spend",
+        "perRun": "per run",
+        "per1kOutput": "per 1k output",
+        "artifacts": "artifacts",
+        "perArtifact": "per artifact",
+        "reads": "reads",
+        "avgTurns": "avg turns",
+        "tool": "tool",
+        "what": "what",
+        "turn": "turn",
+        "volume": "volume",
+        "carried": "carried",
+        "total": "total",
+        "lastArtifact": "last artifact",
+        "tail": "tail",
+        "tailCost": "tail cost",
+        "runShare": "run share",
+        "avgTailShare": "avg tail share",
+        "signature": "signature",
+        "copies": "copies",
+        "agents": "agents",
+        "sessions": "sessions",
+        "size": "size",
+        "overpay": "overpay",
+        "session": "session",
+        "wasToBecome": "was → became",
+        "duration": "duration",
+        "trigger": "trigger",
+        "rebuild": "rebuild",
+        "start": "start",
+        "errors": "errors",
+        "liveRuns": "live runs",
+        "firstErrorAgent": "agent of first error",
+        "windowSpend": "spend in window",
+        "day": "day",
+        "rateLimitsOf": "of which 429",
+        "daySpend": "day spend",
+        "target": "target",
+        "inARow": "in a row",
+        "howLong": "how long it lasted",
+        "whatReturned": "what came back",
+        "errorShare": "share of calls",
+        "errorVolume": "error volume",
+        "gotOut": "made it out",
+        "runCost": "run cost"
+      }
+    },
+    "kpi": {
+      "context": {
+        "label": "Assembled context",
+        "sub": "of which carry {carryShare} · {tokens} tokens, estimate"
+      },
+      "outliers": {
+        "sub": {
+          "one": "{value} in them · {n} run cost twice its own median",
+          "other": "{value} in them · {n} runs cost twice their own median"
+        },
+        "subEmpty": "no run went twice above its own agent's median"
+      },
+      "throttle": {
+        "label": "Hit the rate limit",
+        "sub": {
+          "one": "{n} burst · {singles} single",
+          "other": "{n} bursts · {singles} singles"
+        },
+        "subEmpty": "no 429s"
+      },
+      "compactions": {
+        "label": "Compactions",
+        "sub": "context rebuild {value} · {auto} on fill",
+        "subEmpty": "the context was never rebuilt"
+      }
+    },
+    "outliers": {
+      "title": "Outliers",
+      "note": {
+        "intro": "The baseline isn't a dollar threshold — it's the MEDIAN of the same agent's runs. An expensive planner and a cheap merger cost different amounts, and only the agent's own history knows which number is normal.",
+        "corpusBaseline": "The median here is taken over the agent's ENTIRE history in the index, not this session: a session rarely gives one agent five runs, and judging by three means comparing a fan-out to itself. The \"median of\" column shows how many runs it rests on.",
+        "sessionBaseline": "Runs from ×2 the median make the list; agents with fewer than five runs are never judged — they have no median yet.",
+        "tail": "A row at ×3 or above is highlighted: that's no longer spread, it's a different scenario.",
+        "unjudged": "Not judged: {agents} — they have no steady task; one run is a two-turn question, another is a whole refactor, and spread between them is normal. Their spend shows up in \"cost per unit of output\" and in the tails instead."
+      },
+      "byAgent": {
+        "title": "Who has outliers regularly",
+        "note": "If a third or more of an agent's runs are outliers, that's not outliers — it's two different modes of work under one name, and the median stops describing anything."
+      }
+    },
+    "unitCost": {
+      "title": "Cost per unit of output",
+      "note": "Two denominators, because agents hand back different things: some files, some one block of text. Both are shown — \"per artifact\" and \"per 1k output\". Expensive on both at once means one thing: the agent read a lot and said little. A dash in a column means the agent doesn't produce that kind of output (a reviewer doesn't write files) — not zero, and not a red flag."
+    },
+    "calls": {
+      "title": "Most expensive calls",
+      "carryTurns": {
+        "one": "{n} turn",
+        "other": "{n} turns"
+      },
+      "note": "A block's cost is the WRITE (putting the result into context once) plus the CARRY (the same block riding back to the server again on every following turn of the run). Carry is {carryShare} of the bill: {carryValue} of {totalValue}. So watch the \"turn\" column: a heavy Read on turn two of a forty-turn run gets paid for forty times; the same Read on the second-to-last turn, once.",
+      "estimateNote": "An estimate, not a counter: {calls} tool results are converted from characters to tokens by a fixed ratio. The order of magnitude and the row order matter here, not the third digit."
+    },
+    "runTail": {
+      "title": "Run tail",
+      "note": "The tail is the turns and money AFTER the last recorded artifact: recapping what's already saved, re-reading its own file, a final summary. The cutoff is drawn at the time of the last Write/Edit, so everything billed after it lands here. Runs that never wrote anything at all don't count: for a reviewer, router or matcher, returning one block of text IS the work, not a tail.",
+      "byAgent": {
+        "title": "By agent"
+      }
+    },
+    "duplicates": {
+      "title": "One brief, many agents",
+      "groupsHint": {
+        "one": "{n} group with a repeat",
+        "other": "{n} groups with a repeat"
+      },
+      "note": {
+        "one": "The same dispatch text, sent out to N cold agents. Each recipient writes its own copy into its own cache, and each one is paid for: only the WRITE side is counted, {n} extra copy out of {dispatches} dispatches — {wasteValue}. Carry is untouched by this: it already belongs to whoever received the brief.",
+        "other": "The same dispatch text, sent out to N cold agents. Each recipient writes its own copy into its own cache, and each one is paid for: only the WRITE side is counted, {n} extra copies out of {dispatches} dispatches — {wasteValue}. Carry is untouched by this: it already belongs to whoever received the brief."
+      },
+      "sizeNote": "Size and overpay are an estimate from the argument's character count."
+    },
+    "health": {
+      "title": "What happened to the runs",
+      "hint": "events whose price is a consequence",
+      "note": "No line item on the bill is labeled \"compaction\" or \"retry\". Here events are reconstructed from the log, and the money is attributed by what happened NEXT."
+    },
+    "compactions": {
+      "title": "Compactions",
+      "sessionHint": "click — open session",
+      "trigger": {
+        "auto": "on fill",
+        "manual": "manual"
+      },
+      "note": {
+        "intro": "The compaction call itself costs little. The event's price is the FIRST TURN AFTER it: the surviving context is rewritten into a cold cache in full, at the write rate. In any other report this looks like an ordinary expensive turn.",
+        "summary": {
+          "one": "{count} total across {n} session, {auto} on fill, {manual} manual; typical context at build time — {medianTokens}, total rebuild {rebuildValue}.",
+          "other": "{count} total across {n} sessions, {auto} on fill, {manual} manual; typical context at build time — {medianTokens}, total rebuild {rebuildValue}."
+        }
+      }
+    },
+    "throttle": {
+      "title": "Throttling",
+      "burstHint": "click a burst — open session",
+      "byDay": {
+        "title": "By day",
+        "hint": "spend — for the whole day, not just the errors"
+      },
+      "note": {
+        "intro": "A 429 doesn't cost money directly — it costs TIME and points at the shape of the work. The \"live runs\" column is the answer: a burst counts as many distinct runs as were in flight when it hit the limit. A wide fan-out means that's exactly why it hit the limit.",
+        "burstWord": {
+          "one": "{n} burst",
+          "other": "{n} bursts"
+        },
+        "dayWord": {
+          "one": "{n} day",
+          "other": "{n} days"
+        },
+        "summary": "{bursts} over {days}; another {singles} single retries — not a fan-out, just an ordinary re-ask, and they aren't folded into bursts."
+      }
+    },
+    "failures": {
+      "title": "Failed calls",
+      "subtitle": "{calls} of {allCalls} — {errorRate}",
+      "note": "A failed call is paid for like a successful one: the error text lands in context and carries on every following turn of the run, so an error early in a long run costs many times more than the same error near the end. Total {value} — estimated from character count.",
+      "topCalls": {
+        "title": "The most expensive of them",
+        "hoverHint": "hover the error text — shows it in full"
+      },
+      "repeats": {
+        "title": "Looks like a loop",
+        "hint": "one tool, one target, ≥3 times in a row with an error"
+      },
+      "byTool": {
+        "title": "By tool",
+        "hint": "share — of all calls to this tool"
+      }
+    },
+    "interruptions": {
+      "title": "Interruptions",
+      "subtitle": "{truncated} by max_tokens, {interrupts} stopped manually",
+      "note": "Tokens were produced and paid for, but the work never landed. The unit of loss here is the whole RUN, not the message: if the interruption happened midway, everything before it went nowhere too. Total {value} across the affected runs.",
+      "badge": {
+        "truncated": "hit max_tokens",
+        "interrupted": "stopped"
+      }
+    }
+  },
+  "session": {
+    "tab": {
+      "overview": "Overview"
+    },
+    "tabs": {
+      "ariaLabel": "Session section"
+    },
+    "diag": {
+      "nothingToAnalyze": "There's nothing to break down in this session: no tool calls, and no runs to compare against anything."
+    },
+    "timeline": {
+      "title": "When it started burning",
+      "resetWindow": "whole session ✕",
+      "hint": "drag — zoom, click — run, legend — one agent",
+      "emptyWindow": "no messages in this window",
+      "idleHint": "drag on the chart — zoom into a window · click a bar — open the run",
+      "clickRun": "· click — run",
+      "dragMessages": "{n} messages",
+      "releaseToZoom": "· release — zoom",
+      "legendRemoveFilter": "{agent} — clear filter",
+      "legendIsolate": "{agent} — show only this one"
+    },
+    "kpi": {
+      "spendWindow": "Spend in window",
+      "spendSession": "Session spend",
+      "spendOutOf": "of {total}",
+      "messages": "Messages",
+      "subagents": "Subagents",
+      "subagentShare": "Subagent share"
+    },
+    "panel": {
+      "agentsTitle": "Agents in this session",
+      "agentsHint": "click — all runs of the agent"
+    },
+    "prompt": {
+      "title": "Root prompt",
+      "notFound": "not found — session log unavailable",
+      "empty": "empty prompt",
+      "truncatedNote": "truncated — {chars} total",
+      "expandLabel": "expand command — {chars}",
+      "copy": "copy",
+      "copied": "copied"
+    }
+  },
+  "run": {
+    "subtitle": "{n} runs in this session  ·  {value}",
+    "kpi": {
+      "total": "Total",
+      "runs": "Runs",
+      "avgRun": "Average run",
+      "mostExpensive": "Most expensive",
+      "peakContext": "Peak context",
+      "peakContextSub": "started at {value}",
+      "spend": "Run spend",
+      "turnsCount": "Turns",
+      "toolCalls": "Tool calls",
+      "cacheRewrite": "Cache rewrite",
+      "cacheRewriteExpired": "{n} × expired",
+      "cacheRewriteReset": "{n} × reset"
+    },
+    "panel": {
+      "byTimeTitle": "Runs over time",
+      "byTimeHint": "height — spend, click — open the run",
+      "allTitle": "All runs",
+      "allHint": "click — the run's context and history",
+      "contextTitle": "Context by turn",
+      "contextHint": "area — what went to the API on each turn, bar — turn price",
+      "historyTitle": "History",
+      "historyStepsCount": "{n} steps"
+    },
+    "bars": {
+      "idleHint": "hover — which run · click — open it",
+      "runLabel": "run {n}/{total}",
+      "runMeta": "{messages} turns · {duration} · peak context {peakContext}",
+      "clickToOpen": "· click — open"
+    },
+    "table": {
+      "probes": "probes",
+      "peakContext": "peak context"
+    },
+    "probeBadge": {
+      "title": {
+        "one": "probe «{label}» found {n} non-empty hit in this run",
+        "other": "probe «{label}» found {n} non-empty hits in this run"
+      }
+    },
+    "contextChart": {
+      "noBillableTurns": "no billable turns",
+      "missTooltip": "{tokens} rewritten, +{extra}",
+      "legendRemoveFilter": "{label} — clear filter",
+      "legendOnlyThis": "only {label}",
+      "filterActive": "filter: {label} · click the legend — clear",
+      "idleHint": "hover — what happened on the turn · click — jump to it in the history",
+      "contextValue": "context {value}",
+      "breakdown": "read {read} · write {write} · input {input} · output {output}",
+      "clickToStep": "· click — to the step"
+    },
+    "history": {
+      "tag": {
+        "prompt": "prompt",
+        "result": "result",
+        "error": "error"
+      },
+      "toolExpand": "click — shows the full argument",
+      "toolCut": "{v} total",
+      "empty": "history is empty",
+      "collapseLabel": "collapse",
+      "expandLabel": "expand",
+      "readingMore": "reading…",
+      "noTextError": "no text",
+      "readFailed": "failed to read — retry ▾",
+      "thinking": "thinking {chars}",
+      "cacheMissDetail": "{tokens} rewritten from scratch, +{extra} to the turn's price",
+      "turnContext": {
+        "base": "context {context} = read {read} + write {write}",
+        "inputPart": " + input {input}",
+        "outputPart": " · output {output}"
+      }
+    },
+    "drawer": {
+      "title": "{agent} · run {shortId}"
+    }
+  },
+  "cohort": {
+    "shareTitle": "Hand the agent the shared-context breakdown",
+    "panel": {
+      "title": "Shared context across runs",
+      "idleHint": "what all the runs collected separately: the same file, read by each of them on its own"
+    },
+    "loading": "Reading the logs of {n} runs…",
+    "error": {
+      "staleServer": "The server is answering in an old format: it was started before an update. Restart `node src/cli.ts serve`.",
+      "renderFailed": "Failed to render: {detail}"
+    },
+    "scope": {
+      "wholeSession": "whole session",
+      "hint": "these runs came from different workflows — only count together the ones that actually shared work:"
+    },
+    "summary": {
+      "collected": "{activeRuns} runs collected {collectedTokens} large blocks; {sharedTokens} of them ({shareOfCollected}%) were collected by more than one run. The cost of the repeat collection is {wastedValue} of the cohort's {actualValue} spend ({shareOfSpend}%).",
+      "writeVsCarry": "Of that, {wastedWrite} is writing copies into the cache, at a rate {breakEvenTurn}× higher than a read. That's removable with a shared prefix: neighbors of the same type already share the start of their request, and the second agent reads it from the first one's cache. Whatever it would have collected on its own it reads there too, instead of rewriting it. The remaining {wastedCarry} is carry: each agent resends its own copy on every turn, and inside its own context window it sits there independently of where it came from. Only fewer runs, a digest instead of sources, or fewer turns removes that.",
+      "prefixNote": "Moving it into the prefix isn't free itself: a block the agent would have read on turn {breakEvenTurn} rides from turn one in the prefix instead — the write is saved, the carry is added. Worth it as long as the agents would have reached it before {breakEvenTurnExact} turns (the write rate divided by the read rate); the \"turn\" column is the median across copies. With that caveat, moving it to the prefix returns {prefixRecoverable}. Tokens are estimated — {charsPerToken} characters per token."
+    },
+    "table": {
+      "whatCollected": "what was collected",
+      "prefixReturns": "prefix returns",
+      "variantsSuffix": " · {n} variants",
+      "runsOfTotal": "{runs} of {total}",
+      "memberChip": "run {n} · {id}",
+      "collected": "collected",
+      "sharedOfCollected": "of which shared",
+      "carry": "carry"
+    },
+    "section": {
+      "duplicatesTitle": "The same thing, collected separately",
+      "duplicatesHint": "click a row — which runs, click a run — open it",
+      "perRunTitle": "By run",
+      "perRunHint": "how much of what this run collected its neighbors also had"
+    }
+  },
+  "context": {
+    "shareTitle": "Hand the agent the context composition",
+    "panel": {
+      "title": "Context composition",
+      "idleHint": "what the context is made of, what sits in it twice"
+    },
+    "loading": "Reading the log…",
+    "origin": {
+      "subagent": "Subagent returns",
+      "write": "Own Write / Edit",
+      "plan": "Plans (ExitPlanMode, confirmation)",
+      "thinking": "thinking",
+      "dispatch": "Agent dispatch prompts",
+      "command": "Tool commands",
+      "result": "Tool results",
+      "reminder": "Attachments and reminders",
+      "answer": "answer",
+      "prompt": "prompt",
+      "subagentReturn": "agent return"
+    },
+    "rows": {
+      "systemPrompt": "System prompt, tools, CLAUDE.md",
+      "notRecovered": "Not recovered from the log",
+      "estimateError": "Estimate error"
+    },
+    "table": {
+      "blocks": "blocks",
+      "preview": "preview"
+    },
+    "segment": {
+      "multi": "turn window {from}–{to} of {total} (context was reset in between)",
+      "single": "turns {from}–{to}"
+    },
+    "note": {
+      "summary": "{seg}. Context at the window's last turn — {finalContext}. Tokens aren't counted, they're estimated: {charsPerToken} characters per token — fitted to {points} context increments of this same run. Convergence {errorSign}{errorPct}%."
+    },
+    "dupe": {
+      "headSummary": "{tokens} in context, {wasted} redundant",
+      "memberChip": "{turn} · {label} · {tokens}"
+    },
+    "section": {
+      "dupesTitle": "The same text in context more than once",
+      "dupesHint": "{tokens} redundant — {pct}% of context",
+      "topBlocksTitle": "Heaviest blocks",
+      "topBlocksHint": "click — to the turn in history"
+    }
+  },
+  "cache": {
+    "miss": {
+      "ttlName": {
+        "5m": "5 minutes",
+        "1h": "an hour"
+      },
+      "shortExpired": "cache expired after {duration}",
+      "shortInvalidated": "cache reset, pause {duration}",
+      "longExpired": "cache expired after {duration} idle",
+      "longInvalidated": "cache reset outside the TTL — pause {duration} at a TTL of {ttl}",
+      "hintExpired": "The entry lived {ttl}; after a longer pause the whole context is rewritten from scratch at a rate {rate}× higher than a read.",
+      "hintInvalidated": "The pause was shorter than the TTL — the write hadn't expired. That means the head of the request changed (a tool schema loaded, the skill or agent list updated), and everything after it had to be rewritten. A longer TTL doesn't help here."
+    },
+    "share": {
+      "suffix": " · {pct}% overpay"
+    },
+    "kpi": {
+      "rewrites": "Context rewrites",
+      "rewritesSub": "{tokens} tokens rewritten",
+      "overpay": "Overpay",
+      "overpaySub": "{pct}% of spend for the period",
+      "expired": "TTL expired",
+      "expiredSub": "median pause {value}",
+      "invalidated": "Prefix reset",
+      "invalidatedSub": "pause shorter than TTL — that's not why",
+      "ttlWrites": "TTL writes",
+      "ttlWritesSub": "5 minutes / hour"
+    },
+    "panel": {
+      "byDayTitle": "Overpay by day",
+      "byDayHint": "click — open the day",
+      "byAgentTitle": "Who's losing",
+      "byAgentHint": "click — filter by agent",
+      "missesTitle": "Most expensive misses",
+      "missesHintCount": "{shown} of {total} · click — open the turn",
+      "missesHint": "click — open the turn",
+      "noMisses": "No cache misses in this window"
+    },
+    "verdict": {
+      "title": "If ENABLE_PROMPT_CACHING_1H were on",
+      "rawHint": "in raw tokens the miss doesn't show — the numbers are in dollars",
+      "counterfactualHint": "a counterfactual recompute of this same window",
+      "cheaper": "Cheaper by {value} (−{pct}%) — worth turning on",
+      "moreExpensive": "More expensive by {value} (+{pct}%) — not worth turning on",
+      "row": {
+        "actual": "actual",
+        "hourlyTtl": "with an hourly TTL",
+        "savedMisses": "misses saved",
+        "premium": "2× write premium"
+      },
+      "note": {
+        "one": "Only misses the hourly TTL would actually have prevented count as saved: a pause longer than five minutes but shorter than an hour. Misses with a pause over an hour would not have been saved ({lateMisses} of them), and another {n} miss happened with a live cache — the request prefix was reset there, and TTL length is irrelevant. Rows already on an hourly TTL (the main thread) are untouched by the recompute.",
+        "other": "Only misses the hourly TTL would actually have prevented count as saved: a pause longer than five minutes but shorter than an hour. Misses with a pause over an hour would not have been saved ({lateMisses} of them), and another {n} misses happened with a live cache — the request prefix was reset there, and TTL length is irrelevant. Rows already on an hourly TTL (the main thread) are untouched by the recompute."
+      }
+    },
+    "chart": {
+      "barTooltip": "{day}\n{value} · {misses} misses"
+    },
+    "table": {
+      "misses": "misses",
+      "rewritten": "rewritten",
+      "when": "when",
+      "pause": "pause",
+      "wasted": "wasted",
+      "reason": "reason",
+      "expired": "expired",
+      "reset": "reset"
+    }
+  },
+  "probes": {
+    "scope": {
+      "return": {
+        "short": "agent return",
+        "label": "return — what the agent returned",
+        "hint": "the subagent's last text: what it handed back to the parent. Almost always the right choice for contract blocks."
+      },
+      "assistant": {
+        "short": "model response",
+        "label": "assistant — any model response",
+        "hint": "all responses, including intermediate main-thread turns."
+      },
+      "thinking": {
+        "short": "thinking",
+        "label": "thinking — thinking blocks",
+        "hint": "what the model thought, not what it said."
+      },
+      "prompt": {
+        "short": "human request",
+        "label": "prompt — a human message",
+        "hint": "a user turn, without tool results."
+      },
+      "dispatch": {
+        "short": "subagent brief",
+        "label": "dispatch — a brief to a subagent",
+        "hint": "the call arguments a subagent was launched with."
+      },
+      "write": {
+        "short": "disk write",
+        "label": "write — Write/Edit arguments",
+        "hint": "what was written to files."
+      },
+      "tool_result": {
+        "short": "tool result",
+        "label": "tool_result — a tool result",
+        "hint": "can be narrowed to one tool — then the rule only looks at its output."
+      },
+      "any": {
+        "short": "everywhere",
+        "label": "any — everywhere except return",
+        "hint": "the noisiest option. Good for feeling out where a text shows up at all."
+      }
+    },
+    "hint": {
+      "probe": {
+        "intro": "A probe is a regular expression that looks for a structured block in the logs and ties the hit to an agent RUN. A run has a price, so a hit can be priced in money — grep can't do that. ",
+        "scopeDesc": " decides which text of the log even gets fed to the regex at all: a naive search ",
+        "scopeExample": " over the whole corpus gives 4516 hits — almost all of them mentions of the contract in prompts and read .md files; over agent returns, 588. There's no way to filter that noise out afterward. ",
+        "emptyIfDesc": " decides which capture counts as empty: of those 588 blocks, 535 are empty, but empty as the literal ",
+        "emptyIfExample": " — that's a project convention, the engine can't know it. Without it the probe reports 588 incidents where there are 53."
+      }
+    },
+    "status": {
+      "loading": "Loading probes…",
+      "serverError": "Server didn't respond: {detail}",
+      "scanning": "Scanning…",
+      "scanningProgress": "Scanning: {scanned} of {total} files, {hits} hits",
+      "runFailed": "Run failed: {detail}",
+      "ruleSkipped": "Rule «{id}» skipped: {message}",
+      "runStartFailed": "Failed to start the run: {detail}",
+      "pollFailed": "Run status unavailable: {detail}",
+      "computingReport": "Computing the report…",
+      "reportFailed": "Report failed: {detail}"
+    },
+    "word": {
+      "files": {
+        "one": "{n, number} file",
+        "other": "{n, number} files"
+      },
+      "hits": {
+        "one": "{n, number} hit",
+        "other": "{n, number} hits"
+      }
+    },
+    "action": {
+      "run": "Run",
+      "runTitle": "Scan everything that changed since the last run",
+      "runForce": "Run from scratch",
+      "runForceTitle": "Re-scan the whole corpus from zero, ignoring past run markers",
+      "newProbe": "＋ New probe",
+      "editRule": "Rule",
+      "runThis": "Run this",
+      "runThisProbe": "Run this probe",
+      "check": "Check",
+      "checking": "Checking…",
+      "save": "Save",
+      "delete": "Delete",
+      "deleteConfirm": "Really delete?",
+      "deleteTitleBuiltin": "A built-in probe can't be deleted — it can be disabled, and it comes back once the rule is fixed",
+      "deleteTitle": "Delete the rule and all its hits",
+      "close": "Close"
+    },
+    "badge": {
+      "builtin": "built-in",
+      "disabled": "disabled",
+      "stale": "needs a run"
+    },
+    "panel": {
+      "title": "Probes",
+      "hint": "click a rule — open its report",
+      "flaggedPrice": {
+        "title": "Price of flagged runs",
+        "hint": "click a row — filter by agent",
+        "noteFlagged": "\"Flagged\" — runs where the probe found a NON-EMPTY block. ",
+        "noteOthers": "\"Others\" — runs of the same agent in the same window, with no non-empty hit.",
+        "noteBaseline": " The baseline is deliberately its own, not a corpus average: otherwise the column would just measure that a planner costs more than a merger, which is already known. A ratio of ×1.5 or higher is highlighted — that's where the block stops being a log marker and starts costing money. A dash means the agent has no clean run at all to compare against."
+      },
+      "groupBy": {
+        "title": "Breakdown by groupBy",
+        "note": "The breakdown key is capture group 1 of the groupBy regex. Rows with no key are excluded, so the column sum is less than the total."
+      },
+      "byDay": {
+        "title": "By day",
+        "hint": "bar — hits, not money"
+      },
+      "samples": {
+        "title": "Hits",
+        "hint": "{shown} of {total} loaded · {nonEmpty} non-empty total · click — open the run",
+        "note": "The capture is what landed in group 1 of the regex (or, if there are no groups, the whole match). This text is the whole point of the probe: the numbers above say the incident costs money, this shows exactly what happened."
+      }
+    },
+    "list": {
+      "empty": "No rules yet. Start with a block your agents are required to hand back at the end of a response.",
+      "facts": "{hits} · {nonEmpty} non-empty · {files} files · {tail}",
+      "factsScanned": "scanned {time}",
+      "factsNever": "never run",
+      "noRunData": "no run data",
+      "lastRun": {
+        "summary": "Last run: {files} scanned, {scanned} read, {hits}, {duration} · {time}"
+      }
+    },
+    "table": {
+      "header": {
+        "flagged": "flagged",
+        "theirAvg": "their avg",
+        "others": "others",
+        "ratio": "ratio",
+        "slice": "slice",
+        "hits": "hits",
+        "spendInThem": "spend in them",
+        "nonEmpty": "non-empty"
+      }
+    },
+    "kpi": {
+      "hits": {
+        "label": "Hits",
+        "sub": "{empty} empty — block present, no content"
+      },
+      "nonEmpty": {
+        "label": "Non-empty",
+        "sub": "{pct}% of hits carry text"
+      },
+      "flaggedRuns": {
+        "label": "Runs flagged",
+        "sub": {
+          "one": "in {n, number} session",
+          "other": "in {n, number} sessions"
+        }
+      },
+      "valueFlagged": {
+        "label": "Money in flagged",
+        "sub": "all spend of runs with a non-empty hit"
+      }
+    },
+    "samples": {
+      "openTitle": "Open the run at this moment",
+      "sessionPrefix": "session {id}",
+      "emptyCapture": "(empty capture)",
+      "showMore": "Show {n} more"
+    },
+    "report": {
+      "staleNote": " The rule changed after the last run — the numbers below were computed against the old version. ",
+      "emptyHits": "The rule found nothing in this window. Check the period and filters above, run the probe, and if it's still empty — open \"Rule\" and hit \"Check\": the preview shows whether the regex catches anything at all."
+    },
+    "editor": {
+      "staleHint": "the rule changed — until you run it, the report shows the old version",
+      "newTitle": "New probe",
+      "titlePrefix": "Rule: {label}",
+      "hintSaved": "id {id} · version {rev}",
+      "hintNew": "id must be kebab-case and can't be changed after creation",
+      "toolHint": "narrow to a tool",
+      "builtinNote": "a built-in probe can't be deleted — it can be disabled",
+      "field": {
+        "name": {
+          "label": "Name",
+          "hint": "how the probe is named in the list"
+        },
+        "id": {
+          "hintNew": "latin-with-dashes; can't be changed later",
+          "hintSaved": "a saved probe's id can't be changed"
+        },
+        "scope": {
+          "label": "Where to look"
+        },
+        "pattern": {
+          "label": "Regex",
+          "hint": "Group 1, if present, is the capture; otherwise the whole match becomes the capture. For a paired block, keep both the opening and closing marker in the pattern."
+        },
+        "emptyIf": {
+          "label": "Empty capture (emptyIf)",
+          "hint": "a regex over the trimmed capture: a match means the block exists but is \"empty\". This is your project's own literal, e.g. <empty>."
+        },
+        "groupBy": {
+          "label": "Breakdown (groupBy)",
+          "hint": "a regex with exactly one group; its text becomes the breakdown key"
+        },
+        "enabled": {
+          "label": "Enabled",
+          "hint": "a disabled probe keeps its hits but is not rescanned"
+        }
+      }
+    },
+    "preview": {
+      "summary": "Scanned {scanned} (most recent), {matched} matches, {empty} of them empty, in {duration}. Nothing written — this is a dry run.",
+      "noMatches": "No matches at all. Usually the scope is at fault: try switching \"Where to look\" or simplifying the pattern to one marker and see if even that catches.",
+      "badge": {
+        "empty": "empty",
+        "nonEmpty": "non-empty"
+      },
+      "emptyCaptureShort": "(empty)",
+      "moreHits": "…and {n} more — showing the first 8"
+    }
+  }
+}
