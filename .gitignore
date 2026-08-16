@@ -1,0 +1,17 @@
+node_modules/
+
+# Index lives in ~/.claude/burnlens by default; ignore any local copy.
+*.db
+*.db-journal
+*.db-wal
+
+# Sibling project, cloned here and tracked by its own repo.
+claude-devtools/
+
+.DS_Store
+
+# Paperclip harness permissions/allowlist local to one installation.
+.claude/settings.local.json
+
+# Build output for the npm package; sources run directly from a checkout.
+dist/

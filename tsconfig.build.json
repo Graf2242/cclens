@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "dist",
+    "rootDir": "src",
+    "declaration": false,
+    "sourceMap": false,
+    // Sources import each other as `./db.ts`, which Node runs directly from a
+    // checkout. Emitting rewrites those specifiers to `./db.js` so the built
+    // package resolves without the extension shim.
+    "rewriteRelativeImportExtensions": true
+  },
+  "include": ["src/**/*.ts"]
+}

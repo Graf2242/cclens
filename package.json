@@ -1,0 +1,54 @@
+{
+  "name": "burnlens",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Where the tokens in Claude Code actually go: spend, context and cache forensics across projects, agents and sessions.",
+  "keywords": [
+    "claude-code",
+    "claude",
+    "anthropic",
+    "llm",
+    "token-usage",
+    "cost-analysis",
+    "observability",
+    "cli",
+    "dashboard"
+  ],
+  "license": "MIT",
+  "author": "graf2242 <graf2242@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Graf2242/burnlens.git"
+  },
+  "homepage": "https://github.com/Graf2242/burnlens#readme",
+  "bugs": {
+    "url": "https://github.com/Graf2242/burnlens/issues"
+  },
+  "bin": {
+    "burnlens": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "web",
+    "locales",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "index": "node src/cli.ts index",
+    "serve": "node src/cli.ts serve",
+    "report": "node src/cli.ts report",
+    "typecheck": "tsc --noEmit",
+    "i18n:lint": "node scripts/i18n-lint.js",
+    "check": "npm run typecheck && npm run i18n:lint",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.7",
+    "typescript": "^5.9.3"
+  }
+}
